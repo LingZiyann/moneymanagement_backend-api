@@ -1,0 +1,8 @@
+{
+    "env":{
+        "DB_USER": "lingziyan2015",
+        "DB_PASSWORD": "lingziyaninternship",
+        "JWT_KEY":  "fullstackproject"
+
+    }
+}
