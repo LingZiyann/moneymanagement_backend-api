@@ -28,10 +28,10 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
     try{
         const user = await User.findByCredentials(req.body.name, req.body.password);
-        const token = user.generateAuthToken();
+        const token = await user.generateAuthToken();
         res.send({user, token});
     } catch (e){
-        res.send("Unable to login!");
+        res.status(404).send(e);
         console.log(e);
     };
 };
